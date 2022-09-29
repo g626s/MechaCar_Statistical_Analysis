@@ -59,3 +59,7 @@ summary(MechaLinear)
 ```
 _R Console Output_
 
+<p align="center">
+<img width="900" src="https://user-images.githubusercontent.com/107281474/192966573-c8f30c36-c5d6-4bf3-aa7d-388af1bf5547.png">
+</p>
+
