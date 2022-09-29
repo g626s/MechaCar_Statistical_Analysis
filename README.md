@@ -69,10 +69,35 @@ _R Console Output_
   
 - From the `Linear Regression to Predict MPG`, the linear model predicts mpg of MechaCar prototypes effectively due to the fact that the linear model has an r-squared value of _0.7149_. This translates to that approximately _71.5%_ of all mpg predicitions will be correct and successful when using this given model. 
   
-  
-  
-  
-  
-  
+## Summary Statistics on Suspension Coils
+The MechaCar `Suspension_Coil.csv` dataset contains the results from multiple production lots. In this dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots. Incorporating R's resources, a summary statistics table was created to display:
+- The suspension coil’s PSI continuous variable across all manufacturing lots
+- The following PSI metrics for each lot: mean, median, variance, and standard deviation.
 
+### _Technical Analysis_
+```
+SuspensionData <- read.csv("Suspension_Coil.csv", stringsAsFactors = F, check.names = F)
 
+total_summary <- SuspensionData %>% summarize(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI))
+
+lot_summary <- SuspensionData %>% group_by(Manufacturing_Lot) %>% summarize(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI), .groups = "keep")
+```
+_R Console Output_
+- Total Summary Statistics
+<p align="center">
+<img width="350" src="https://user-images.githubusercontent.com/107281474/193104232-d99b8263-9f4d-4d17-8616-0c1e72c89772.png">
+</p>
+  
+- Lot Summary Statistics
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/107281474/193104709-8f67a525-7e86-442c-acd6-0350a52a7d82.png">
+</p>
+
+### _Summary_
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. From the `Total Summary Statistics` and `Lot Summary Statistics` we can infer that:
+  
+- The given sample population has a suspension coil PSI variance of _~62.3_, that falls within the range of the _100_ PSI variance per square inch requiremen.
+  
+- Analying the lots individually, `Lot 1` and `Lot 2` both pass and meet the requirements of the _100_ PSI variance of the suspension coils and fall within _~1_ PSI and _~7.5_ PSI. 
+ 
+- `Lot 3` however, does not meet the suspension coil PSI variance requirement, with a variance of _~170.30_. From the highly skewed PSI variance of `Lot 3`, we can for certain say that `Lot 3` is disproprotionally skewing the total manufacturer's variance to the right. In addition, since `Lot 3's` standard deviation is _13.04_, there is potential outliers.
