@@ -82,7 +82,7 @@ total_summary <- SuspensionData %>% summarize(Mean = mean(PSI), Median = median(
 
 lot_summary <- SuspensionData %>% group_by(Manufacturing_Lot) %>% summarize(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI), .groups = "keep")
 ```
-_R Console Output_
+_R Output_
 - Total Summary Statistics
 <p align="center">
 <img width="350" src="https://user-images.githubusercontent.com/107281474/193104232-d99b8263-9f4d-4d17-8616-0c1e72c89772.png">
@@ -101,3 +101,20 @@ The design specifications for the MechaCar suspension coils dictate that the var
 - Analying the lots individually, `Lot 1` and `Lot 2` both pass and meet the requirements of the _100_ PSI variance of the suspension coils and fall within _~1_ PSI and _~7.5_ PSI. 
  
 - `Lot 3` however, does not meet the suspension coil PSI variance requirement, with a variance of _~170.30_. From the highly skewed PSI variance of `Lot 3`, we can for certain say that `Lot 3` is disproprotionally skewing the total manufacturer's variance to the right. In addition, since `Lot 3's` standard deviation is _13.04_, there is potential outliers.
+
+## T-Test on Suspension Coils
+Using R's resources, we created andn performed t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
+
+### _Technical Analysis_
+```
+# Manufacturing Lot t-test
+t.test(SuspensionData$PSI, mu=1500)
+
+# Lot 1
+t.test(subset(SuspensionData, Manufacturing_Lot== "Lot1")$PSI, mu=1500)
+# Lot 2
+t.test(subset(SuspensionData, Manufacturing_Lot== "Lot2")$PSI, mu=1500)
+# Lot 3
+t.test(subset(SuspensionData, Manufacturing_Lot== "Lot3")$PSI, mu=1500)
+```
+_R Console Output_
