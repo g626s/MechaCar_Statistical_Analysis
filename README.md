@@ -118,3 +118,44 @@ t.test(subset(SuspensionData, Manufacturing_Lot== "Lot2")$PSI, mu=1500)
 t.test(subset(SuspensionData, Manufacturing_Lot== "Lot3")$PSI, mu=1500)
 ```
 _R Console Output_
+- Manufacturing Lots
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/107281474/193171686-6bcf5ed7-6607-4e48-b894-514f4c7fa73d.png">
+</p>
+  
+- Lot 1 
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/107281474/193172427-4d388179-9402-44e9-aadb-1a2fcf5b593e.png">
+</p>
+  
+- Lot 2 
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/107281474/193171916-f46f27c0-0e1c-4fb9-be35-11a71ef2e8ad.png">
+</p>
+
+- Lot 3
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/107281474/193172049-5108485c-a905-487b-92cf-78f161484767.png">
+</p>
+
+### _Summary_
+From the given t-tests, the mean of the sample population is similar to that of the total population's PSI. 
+- In regards to the `Manufacturing Lot T-Test`, the true mean of the samples is _1498.78_ with a p-value of _0.06_. Since the p-value is higher than the assumed significance level, there is not enough evidence to reject the null hypothesis. 
+
+- In `Lot 1`, the p-value is _1_, which is therefore much larger than the signficance level. Given that, the probability of another sample prototype producing the same PSI measurement is _100%_. 
+  
+- In `Lot 2`, the p-value is _0.61_ and for that reason, there is not sufficent evidence to reject the null hypothesis. 
+  
+- In `Lot 3`, the p-value is _0.04_, that is significantly less than our significance level. There is not enough evidence to reject our null hypothesis. In addition, the sample population mean is not statistically similar to the population's mean. 
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
