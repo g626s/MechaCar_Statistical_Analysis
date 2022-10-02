@@ -151,14 +151,23 @@ From the given t-tests, the mean of the sample population is similar to that of 
 ## Study Design: MechaCar vs Competition
 Using our knowledge of R, we then designed a statistical study to compare performance of the MechaCar vehicles against performance of vehicles from other manufacturers. We began to first critically think about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
   
-In terms of evaluating the current automotive market and industry, most consumers would want full transparancy and an overall understanding the maintenance cost of their car. We can then recommend and design a statistical study of MechaCar's repair/maintenance cost compared to its competitors. From this if the design study is able to quantifiably show that the MechaCar's repair cost is lower than its competitiors, we can analyze but most importantly market and advertise MechaCar's vehicle products that can increase sales and other measurable metrics. 
+In terms of evaluating the current automotive market and industry, most consumers would want full transparancy and an overall understanding of the fuel efficiency of their car. We can then recommend and design a statistical study of MechaCar's vehicle fuel efficency compared to its competitors. From this if the design study is able to quantifiably show that the MechaCar's vehicle fuel efficiency compared to its competitiors, we can analyze but most importantly market and advertise MechaCar's vehicle products that can increase sales and other measurable metrics. 
+- In terms of what questions to consider for this aspect of our project, when creating how to test for fuel efficiency, it is important to highlight and determine if there should be a complementary variable to consider to find the true value of fuel efficiency as a performance metric in this proposed study design. Maintenance cost as a continuous variable would be appropriate to incorporate in relation to fuel efficiency. 
   
+_Study Design Description:_
+- Question: Is there any statistical difference of the MechaCar's fuel efficiency vs its competitors based on maintenance costs over the vehicle's product life cycle and fuel consumed?
   
-  
-  
-  
-  
-  
-  
-  
+- Testing: The testing method would be a two-way ANOVA test.
+  - Independent variable 1: Fuel efficiency as categorical datatypes that represent various measures of miles driven and fuel consumed based on the car's product lifecycle (i.e Intervals of 6 months since purchase).
+  - Independent variable 2: Car Manufacturer (categorical)
+  - Dependent variable: Maintenance Cost
+- Data Needed:
+  - A large controlled sample size of vehicles divided by car type of MechaCar and its competitors. 
+  - Summary Statistics of fuel efficiency to break up into intervals for categorical use
+  - Maintenance Cost of the car
+- Null and Alternative Hypothesis:
+```
+H0: The mean fuel efficiency of each car manufacturer over the vehicle's product lifecycle of the car (measured in intervals of 6 months since purchase) are equal.
 
+Ha: At least one of the car manufacturer's means is different from all other car manufacturer groups. (Mechacar's fuel efficiency is higher). 
+```
