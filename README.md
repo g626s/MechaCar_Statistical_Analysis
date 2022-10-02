@@ -148,7 +148,10 @@ From the given t-tests, the mean of the sample population is similar to that of 
   
 - In `Lot 3`, the p-value is _0.04_, that is significantly less than our significance level. There is not enough evidence to reject our null hypothesis. In addition, the sample population mean is not statistically similar to the population's mean. 
   
-
+## Study Design: MechaCar vs Competition
+Using our knowledge of R, we then designed a statistical study to compare performance of the MechaCar vehicles against performance of vehicles from other manufacturers. We began to first critically think about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
+  
+In terms of evaluating the current automotive market and industry, most consumers would want full transparancy and an overall understanding the maintenance cost of their car. We can then recommend and design a statistical study of MechaCar's repair/maintenance cost compared to its competitors. From this if the design study is able to quantifiably show that the MechaCar's repair cost is lower than its competitiors, we can analyze but most importantly market and advertise MechaCar's vehicle products that can increase sales and other measurable metrics. 
   
   
   
